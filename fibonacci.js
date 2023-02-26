@@ -1,15 +1,15 @@
 "use strict";
 
 function isFibonacci(n) {
-    let a = 0;
-    let b = 1;
+    let prev = 0;
+    let current = 1;
     let temp;
-    while (b < n) {
-        temp = a + b;
-        a = b;
-        b = temp;
+    while (current < n) {
+        temp = prev + current;
+        prev = current;
+        current = temp;
     }
-    return (b === n || n === 0) ? "O numero pertence a sequencia" : "O numero nao pertence a sequencia";
+    return (current === n || n === 0) ? "O numero pertence prev sequencia" : "O numero nao pertence prev sequencia";
 }
 
 

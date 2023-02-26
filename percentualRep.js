@@ -9,12 +9,12 @@ const data = {
 };
 
 function calculaPercentual(data) {
-    const soma = Object.values(data).reduce((a, b) => {
+    const sum = Object.values(data).reduce((a, b) => {
         return a + b
     });
     console.log("Percentual de Representacao");
     for (const [key, value] of Object.entries(data)) {
-        console.log(`${key}: ${(value / soma * 100).toFixed(2)}%`);
+        console.log(`${key}: ${(value / sum * 100).toFixed(2)}%`);
     }
 
 }
